@@ -3,7 +3,6 @@ console.log('Welcome to the calculator!');
 
 console.log('Type an operator:');
 const operator_str = readline.prompt();
-var operator_num = parseInt(operator_str);
 
 console.log('Type a first number to operate:');
 const first_num_str = readline.prompt();
@@ -13,5 +12,18 @@ console.log('Type a second number to operate: ')
 const second_num_str = readline.prompt();
 var second_num = parseFloat(second_num_str)
 
-console.log('The answer is ' + (first_num + second_num))
+if (operator_str == "+"){
+    console.log('The answer is ' + (first_num + second_num))
+} else if (operator_str == "-"){
+    console.log('The answer is ' + (first_num - second_num))
+} else if (operator_str == "*"){
+    console.log('The answer is ' + (first_num * second_num))
+} else if (operator_str == "/"){
+    console.log('The answer is ' + (first_num / second_num))
+} else {
+    console.error('Invalid Operator!')
+}
+
+
+
 
